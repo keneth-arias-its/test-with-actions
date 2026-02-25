@@ -1,12 +1,12 @@
-## Passo 3: Attiva i workflow
+## Step 3: Attiva i workflow
 
-Come specificato nei nostri workflow, verranno eseguiti solo quando una pull request punta al branch `main`.
+Come specificato nei nostri workflow, verranno eseguiti solo quando una pull request è diretta verso il branch `main`.
 
-Le pull request hanno un bel vantaggio quando un workflow è associato a esse. Lo stato dell'esecuzione e i risultati possono essere visualizzati direttamente nel feed della conversazione.
+Le pull request hanno un bel vantaggio quando c'è un workflow associato. Lo stato dell'esecuzione e i risultati possono essere visualizzati direttamente nel feed della conversazione.
 
 ### ⌨️ Attività: Avvia una PR e proponi una modifica al codice
 
-1. Torna al Codespace di VS Code.
+1. Ritorna al Codespace di VS Code.
 
 1. Crea un nuovo branch basato su `main` con il seguente nome e **pubblicalo** su GitHub.
 
@@ -18,7 +18,7 @@ Le pull request hanno un bel vantaggio quando un workflow è associato a esse. L
 
 1. Dopo aver esaminato il codice, vediamo un test commentato alla riga 56. Rimuovi il commento per riabilitarlo.
 
-   > Speriamo non sia stato disabilitato per evitare i test! 😱
+   > Speriamo non sia stato disabilitato per evitare i test!
 
    ```py
    def test_get_nth_fibonacci_ten():
@@ -33,9 +33,9 @@ Le pull request hanno un bel vantaggio quando un workflow è associato a esse. L
     assert result == 89
    ```
 
-1. Committa le modifiche e pushale su GitHub.
+1. Fai il commit delle modifiche ed esegui il push su GitHub.
 
-1. Torna al browser e crea una pull request. Usa i seguenti dettagli.
+1. Ritorna al browser e crea una pull request. Usa i seguenti dettagli.
 
    - **base:** `main`
    - **source:** `reenable-unit-test`
@@ -43,23 +43,23 @@ Le pull request hanno un bel vantaggio quando un workflow è associato a esse. L
 
    <br/>
    <details>
-   <summary><b>Hai problemi:</b> Non riesci a creare una pull request? 🤷‍♂️</summary>
+   <summary><b>Hai dei problemi:</b> Non riesci a creare una pull request? 🤷‍♂️</summary>
 
-   Hai committato accidentalmente nel branch `main`? Ecco un comando per annullare l'ultimo commit e aggiornare forzatamente il repository su GitHub. Fai attenzione a non tornare indietro di troppi passaggi però! Non vuoi rimuovere i tuoi nuovi workflow!
+   Hai fatto per errore un commit sul branch `main`? Ecco un comando per annullare l'ultimo commit e forzare l'aggiornamento del repository su GitHub. Fai attenzione però a non tornare indietro di troppi step! Non vorrai mica rimuovere i tuoi nuovi workflow!
 
    ```bash
    git reset --hard HEAD~1
    git push -f
    ```
 
-1. Dopo aver creato la pull request, guarda vicino al pulsante Merge per vedere molti workflow in esecuzione.
+1. Dopo che la pull request è stata creata, guarda vicino al pulsante Merge per vedere molti workflow in esecuzione.
 
    - Il nostro workflow di copertura fallirà, facendoci sapere che abbiamo un test da correggere.
 
-1. Con la pull request avviata, Mona dovrebbe essere impegnata a controllare il tuo lavoro e preparare i passaggi successivi.
+1. Con la pull request avviata, Mona dovrebbe essere impegnata a controllare il tuo lavoro e a preparare i prossimi step.
 
 <details>
-<summary>Hai problemi?  🤷‍♂️</summary>
+<summary>Hai dei problemi?  🤷‍♂️</summary>
 
 - Se i controlli non appaiono aggiornati, prova ad aggiornare la pagina. È possibile che il workflow sia stato eseguito e la pagina non sia stata ancora aggiornata con la modifica.
 

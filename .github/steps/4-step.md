@@ -1,4 +1,4 @@
-## Passo 4: Imponi i workflow
+## Step 4: Imponi i workflow
 
 Potresti aver notato che il pulsante merge era ancora attivo prima che i nostri test finissero.
 Peggio ancora, alcuni test sono falliti e non c'era nulla che impedisse di unire comunque il codice rotto! 😱
@@ -23,11 +23,11 @@ Risolviamo questo problema per evitare che qualcuno (accidentalmente) aggiri la 
 
    <br/>
 
-   > 🪧 **Nota:** Per mantenere la lezione semplice, stiamo controllando solo il workflow di copertura. Sentiti libero di sperimentare però!
+   > 🪧 **Nota:** Per mantenere semplice la lezione, stiamo solo controllando il workflow di copertura. Sentiti libero però di sperimentare!
 
-   <img width="300" alt="target branch settings" src="https://github.com/IDT-25-27/idt-25-27-classroom-173794-test-with-actions-test-with-actions-1/blob/main/.github/images/branch-protection-target-settings.png?raw=true" />
+   <img width="300" alt="target branch settings" src="../images/branch-protection-target-settings.png" />
 
-   <img width="300" alt="required status checks" src="https://github.com/IDT-25-27/idt-25-27-classroom-173794-test-with-actions-test-with-actions-1/blob/main/.github/images/required-status-checks.png?raw=true" />
+   <img width="300" alt="required status checks" src="../images/required-status-checks.png" />
 
 1. Fai clic su **Create**.
 
@@ -35,29 +35,29 @@ Risolviamo questo problema per evitare che qualcuno (accidentalmente) aggiri la 
 
 1. Scorri fino in fondo per trovare i workflow falliti e il pulsante **Merge** è ora disabilitato! Ottimo! 🥰
 
-   <img width="500" alt="failed tests and disabled merge button" src="https://github.com/IDT-25-27/idt-25-27-classroom-173794-test-with-actions-test-with-actions-1/blob/main/.github/images/failed-tests-disabled-merge.png?raw=true" />
+   <img width="500" alt="failed tests and disabled merge button" src="../images/failed-tests-disabled-merge.png" />
 
 > [!TIP]
-> Interessato a imparare altri modi per preparare il tuo progetto per la collaborazione? Dai un'occhiata all'esercizio [Introduction to Repository Management](https://github.com/skills/introduction-to-repository-management) dopo!
+> Interessato a imparare altri modi per preparare il tuo progetto per la collaborazione? Dopo dai un'occhiata all'esercizio [Introduction to Repository Management](https://github.com/skills/introduction-to-repository-management)!
 
-### Attività: Correggi il test rotto
+### Attività: Correggi il test fallito
 
-Indaghiamo perché il nostro workflow di test è fallito. È mal configurato o qualche codice è errato? Forse c'era un motivo per cui quel test era disabilitato?!
+Investighiamo sul perché il nostro workflow di test è fallito. È mal configurato o c'è del codice sbagliato? Forse c'era un motivo per cui quel test era stato disabilitato?!
 
-1. Fai clic sul workflow `Python Coverage` per visualizzare i log. Navigherà automaticamente ai log falliti.
+1. Fai clic sul workflow `Python Coverage` per visualizzare i log. Navigherà automaticamente verso i log falliti.
 
-1. Dopo qualche ispezione, ci sono 2 problemi che impediscono il merge.
+1. Dopo un po' d'ispezione, ci sono 2 problemi che impediscono il merge.
 
    - 1 test sta fallendo.
-   - La copertura è inferiore al requisito del 90%.
+   - La copertura è al di sotto del requisito del 90%.
 
 1. Passa al Codespace di VS Code.
 
 1. Apri il file `tests/calculations_test.py`.
 
-1. Dopo qualche indagine, vediamo che il test rotto potrebbe essere stato commentato perché era progettato in modo errato.
+1. Dopo un po' di indagini, vediamo che il test corrotto potrebbe essere stato commentato perché progettato in modo errato.
 
-   - Una rapida ricerca su google mostra che la decima voce nella sequenza di Fibonacci è `55`, non `89`.
+   - Una rapida ricerca su Google mostra che il decimo elemento nella sequenza di Fibonacci è `55`, non `89`.
 
 1. Modifica il test per usare il valore di assert corretto.
 
@@ -80,17 +80,16 @@ Indaghiamo perché il nostro workflow di test è fallito. È mal configurato o q
 
 ## Attività: Correggi la bassa copertura dei test
 
-Con il nostro test corretto, ora stiamo ottenendo risultati di copertura.
-Purtroppo è inferiore al requisito del 90%.
-Aggiungiamo altri test per aumentare la copertura.
+Con il nostro test corretto, ora stiamo ottenendo i risultati di copertura.
+Sfortunatamente è sotto il requisito del 90%.
+Aggiungiamo qualche altro test per aumentare la copertura.
 
 1. Aggiungiamo 2 test per aumentare la copertura.
-In alternativa, puoi chiedere a GitHub Copilot di trovare casi di test mancanti espandendo il prompt qui sotto.
-
+In alternativa, puoi chiedere a GitHub Copilot di trovare i casi di test mancanti espandendo il prompt elencato di seguito.
 
    1. Apri il file `tests/calculations_test.py`.
 
-   1. Aggiungi le seguenti 2 voci.
+   1. Aggiungi le 2 voci seguenti.
 
       ```py
       def test_area_of_circle_negative_radius():
@@ -125,15 +124,15 @@ In alternativa, puoi chiedere a GitHub Copilot di trovare casi di test mancanti 
 
    </details>
 
-1. Committa e pusha i 2 nuovi test.
+1. Fai il commit e il push dei 2 nuovi test.
 
-1. Attendi un momento che i workflow vengano eseguiti un'ultima volta.
+1. Attendi un momento affinché i workflow vengano eseguiti un'ultima volta.
 
    - Il commento sulla copertura si aggiornerà al 100%.
    - Il pulsante merge si attiverà!
 
 1. Fai clic sul pulsante **Merge**.
 
-   <img width="500" alt="immagine" src="https://github.com/IDT-25-27/idt-25-27-classroom-173794-test-with-actions-test-with-actions-1/blob/main/.github/images/merge-button-active.png?raw=true" />
+   <img width="500" alt="immagine" src="../images/merge-button-active.png" />
 
-1. Con la copertura completa, tutti i test passati e la pull request unita, Mona condividerà una revisione finale. Congratulazioni, hai finito!
+1. Con copertura totale, tutti i test superati e il merge della pull request completato, Mona condividerà una revisione finale. Congratulazioni, hai finito tutto!
