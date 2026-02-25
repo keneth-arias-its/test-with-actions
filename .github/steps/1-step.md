@@ -54,7 +54,7 @@ La [Continuous integration](https://it.wikipedia.org/wiki/Integrazione_continua)
    pytest --cov=src --verbose
    ```
 
-1. Aggiungi un commento in questa issue per far sapere a Mona i risultati del tuo report di copertura. Dopo averlo revisionato, fornirà i prossimi step.
+1. Aggiungi un commento in questa issue per far sapere a Octocat i risultati del tuo report di copertura. Dopo averlo revisionato, fornirà i prossimi step.
 
    ```md
    @professortocat, I've run my coverage report.

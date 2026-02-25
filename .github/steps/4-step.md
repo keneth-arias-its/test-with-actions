@@ -135,4 +135,4 @@ In alternativa, puoi chiedere a GitHub Copilot di trovare i casi di test mancant
 
    <img width="500" alt="immagine" src="../images/merge-button-active.png" />
 
-1. Con copertura totale, tutti i test superati e il merge della pull request completato, Mona condividerà una revisione finale. Congratulazioni, hai finito tutto!
+1. Con copertura totale, tutti i test superati e il merge della pull request completato, Octocat condividerà una revisione finale. Congratulazioni, hai finito tutto!

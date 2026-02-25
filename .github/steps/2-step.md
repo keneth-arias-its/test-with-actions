@@ -150,7 +150,7 @@ File di workflow finito: `.github/workflows/python-package.yml.example`
 
 1. Fai il commit ed esegui il push delle modifiche al tuo file `python-coverage.yml` sul branch `main`.
 
-1. Con entrambi i nuovi workflow inviati tramite push a GitHub, Mona revisionerà il tuo lavoro e pubblicherà i prossimi step.
+1. Con entrambi i nuovi workflow inviati tramite push a GitHub, Octocat revisionerà il tuo lavoro e pubblicherà i prossimi step.
 
 > [!TIP]
 > Hai notato le numerose dichiarazioni `uses:`? Quelli sono step pre-creati dal [Marketplace delle Action](https://github.com/marketplace?type=actions) gratuito. Considera di provarne uno prima di creare i tuoi script personalizzati (da mantenere)! Ci sono un sacco di creazioni dalla comunità!

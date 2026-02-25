@@ -56,7 +56,7 @@ Le pull request hanno un bel vantaggio quando c'è un workflow associato. Lo sta
 
    - Il nostro workflow di copertura fallirà, facendoci sapere che abbiamo un test da correggere.
 
-1. Con la pull request avviata, Mona dovrebbe essere impegnata a controllare il tuo lavoro e a preparare i prossimi step.
+1. Con la pull request avviata, Octocat dovrebbe essere impegnata a controllare il tuo lavoro e a preparare i prossimi step.
 
 <details>
 <summary>Hai dei problemi?  🤷‍♂️</summary>
